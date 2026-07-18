@@ -21,7 +21,10 @@ public class SaleEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "invoice_number", unique = true, nullable = false, length = 50)
+    @Column(name = "company_id", nullable = false)
+    private Long companyId;
+
+    @Column(name = "invoice_number", nullable = false, length = 50)
     private String invoiceNumber;
 
     @Column(name = "customer_id", nullable = false)

@@ -15,6 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Sale {
     private Long id;
+    private Long companyId;
     private String invoiceNumber;
     private Long customerId;
     private BigDecimal totalAmount;

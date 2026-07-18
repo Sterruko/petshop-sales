@@ -14,4 +14,10 @@ public interface SaleJpaRepository extends JpaRepository<SaleEntity, Long> {
     List<SaleEntity> findByCustomerIdAndActiveTrueOrderByCreatedAtDesc(Long customerId);
     Optional<SaleEntity> findByInvoiceNumberAndActiveTrue(String invoiceNumber);
     boolean existsByInvoiceNumber(String invoiceNumber);
+
+    List<SaleEntity> findAllByCompanyIdAndActiveTrueOrderByCreatedAtDesc(Long companyId);
+    Optional<SaleEntity> findByIdAndCompanyIdAndActiveTrue(Long id, Long companyId);
+    List<SaleEntity> findByCompanyIdAndCustomerIdAndActiveTrueOrderByCreatedAtDesc(Long companyId, Long customerId);
+    Optional<SaleEntity> findByCompanyIdAndInvoiceNumberAndActiveTrue(Long companyId, String invoiceNumber);
+    boolean existsByCompanyIdAndInvoiceNumber(Long companyId, String invoiceNumber);
 }

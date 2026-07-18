@@ -20,6 +20,9 @@ public class SaleItemEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "company_id", nullable = false)
+    private Long companyId;
+
     @Column(name = "sale_id", nullable = false)
     private Long saleId;
 

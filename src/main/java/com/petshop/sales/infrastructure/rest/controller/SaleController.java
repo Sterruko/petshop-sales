@@ -84,6 +84,7 @@ public class SaleController {
                 : List.of();
         return SaleResponse.builder()
                 .id(sale.getId())
+                .companyId(sale.getCompanyId())
                 .invoiceNumber(sale.getInvoiceNumber())
                 .customerId(sale.getCustomerId())
                 .totalAmount(sale.getTotalAmount())
@@ -102,6 +103,7 @@ public class SaleController {
     private SaleItemResponse toItemResponse(SaleItem item) {
         return SaleItemResponse.builder()
                 .id(item.getId())
+                .companyId(item.getCompanyId())
                 .saleId(item.getSaleId())
                 .productSku(item.getProductSku())
                 .productName(item.getProductName())
